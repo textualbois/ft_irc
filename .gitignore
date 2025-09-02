@@ -1,3 +1,8 @@
+# macos rubbish
+.DS_Store
+.AppleDouble
+.LSOverride
+
 # Prerequisites
 *.d
 
