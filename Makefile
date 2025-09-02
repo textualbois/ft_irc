@@ -12,10 +12,10 @@ CXXWARN     := -Wall -Wextra -Werror
 UNAME_S     := $(shell uname -s)
 ifeq ($(UNAME_S),Darwin)
   PLATFORM  := macos
-  CXXDEFS   := -DFTIRC_MACOS -DFTIRC_POLLER_KQUEUE
+  CXXDEFS   := -DFTIRC_MACOS
 else
   PLATFORM  := linux
-  CXXDEFS   := -DFTIRC_LINUX -DFTIRC_POLLER_EPOLL
+  CXXDEFS   := -DFTIRC_LINUX
 endif
 
 # ---- Sources (all *.cpp except under build/)
@@ -54,5 +54,4 @@ fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
-
 
